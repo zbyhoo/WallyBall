@@ -13,6 +13,8 @@
 #import "HelloWorldLayer.h"
 #import "RootViewController.h"
 
+#import "MenuLayer.h"
+
 @implementation AppDelegate
 
 @synthesize window;
@@ -111,7 +113,7 @@
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
+	[[CCDirector sharedDirector] runWithScene: [MenuLayer scene]];
 }
 
 

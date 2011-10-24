@@ -159,6 +159,10 @@
 		26585C8B1455E9E9002C60C6 /* HelloWorldLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26585C8A1455E9E9002C60C6 /* HelloWorldLayer.mm */; };
 		26585C8E1455E9E9002C60C6 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26585C8D1455E9E9002C60C6 /* GLES-Render.mm */; };
 		26585C911455E9E9002C60C6 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 26585C901455E9E9002C60C6 /* blocks.png */; };
+		26585C9A1455ECFC002C60C6 /* MenuLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26585C991455ECFC002C60C6 /* MenuLayer.mm */; };
+		26585C9E1455F3AA002C60C6 /* menu_play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 26585C9C1455F3AA002C60C6 /* menu_play_button.png */; };
+		26585C9F1455F3AA002C60C6 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 26585C9D1455F3AA002C60C6 /* title.png */; };
+		26585CA11455F9B7002C60C6 /* menu_play_button_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 26585CA01455F9B7002C60C6 /* menu_play_button_selected.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -473,6 +477,11 @@
 		26585C8D1455E9E9002C60C6 /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		26585C8F1455E9E9002C60C6 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		26585C901455E9E9002C60C6 /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
+		26585C981455ECFC002C60C6 /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuLayer.h; path = Menu/MenuLayer.h; sourceTree = "<group>"; };
+		26585C991455ECFC002C60C6 /* MenuLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MenuLayer.mm; path = Menu/MenuLayer.mm; sourceTree = "<group>"; };
+		26585C9C1455F3AA002C60C6 /* menu_play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_play_button.png; path = Resources/Menu/menu_play_button.png; sourceTree = "<group>"; };
+		26585C9D1455F3AA002C60C6 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = title.png; path = Resources/Menu/title.png; sourceTree = "<group>"; };
+		26585CA01455F9B7002C60C6 /* menu_play_button_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu_play_button_selected.png; path = Resources/Menu/menu_play_button_selected.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -529,6 +538,7 @@
 		26585ABE1455E9E3002C60C6 /* WallyBall */ = {
 			isa = PBXGroup;
 			children = (
+				26585C971455EC69002C60C6 /* Menu */,
 				26585C831455E9E9002C60C6 /* AppDelegate.h */,
 				26585C841455E9E9002C60C6 /* AppDelegate.mm */,
 				26585C861455E9E9002C60C6 /* RootViewController.h */,
@@ -548,6 +558,7 @@
 		26585ABF1455E9E3002C60C6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				26585C9B1455F025002C60C6 /* Menu */,
 				26585AC01455E9E3002C60C6 /* Default.png */,
 				26585AC21455E9E3002C60C6 /* fps_images.png */,
 				26585AC41455E9E3002C60C6 /* Icon-72.png */,
@@ -1003,6 +1014,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		26585C971455EC69002C60C6 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				26585C981455ECFC002C60C6 /* MenuLayer.h */,
+				26585C991455ECFC002C60C6 /* MenuLayer.mm */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		26585C9B1455F025002C60C6 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				26585C9D1455F3AA002C60C6 /* title.png */,
+				26585C9C1455F3AA002C60C6 /* menu_play_button.png */,
+				26585CA01455F9B7002C60C6 /* menu_play_button_selected.png */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1063,6 +1093,9 @@
 				26585ACF1455E9E3002C60C6 /* Icon@2x.png in Resources */,
 				26585AD21455E9E3002C60C6 /* iTunesArtwork in Resources */,
 				26585C911455E9E9002C60C6 /* blocks.png in Resources */,
+				26585C9E1455F3AA002C60C6 /* menu_play_button.png in Resources */,
+				26585C9F1455F3AA002C60C6 /* title.png in Resources */,
+				26585CA11455F9B7002C60C6 /* menu_play_button_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1207,6 +1240,7 @@
 				26585C881455E9E9002C60C6 /* RootViewController.m in Sources */,
 				26585C8B1455E9E9002C60C6 /* HelloWorldLayer.mm in Sources */,
 				26585C8E1455E9E9002C60C6 /* GLES-Render.mm in Sources */,
+				26585C9A1455ECFC002C60C6 /* MenuLayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
